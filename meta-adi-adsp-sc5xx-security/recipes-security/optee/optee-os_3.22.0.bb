@@ -11,9 +11,9 @@ inherit deploy python3native
 
 DEPENDS = "python3-cryptography-native python3-pycryptodome-native python3-pycryptodomex-native python3-pyelftools-native openssl-native"
 
-OPTEE_OS_GIT_URI ?= "git://github.com/analogdevicesinc/optee_os.git"
+OPTEE_OS_GIT_URI ?= "git://github.com/OliverGaskellADI/optee_os.git"
 OPTEE_OS_GIT_PROTOCOL ?= "https"
-OPTEE_OS_GIT_BRANCH ?= "develop/yocto-3.1.0"
+OPTEE_OS_GIT_BRANCH ?= "3.22.0-testing"
 OPTEE_OS_CORE_LOG_LEVEL ?= "1"
 OPTEE_OS_ENABLE_TESTS ?= "n"
 
@@ -21,7 +21,7 @@ SRC_URI = " \
 	${OPTEE_OS_GIT_URI};branch=${OPTEE_OS_GIT_BRANCH};protocol=${OPTEE_OS_GIT_PROTOCOL} \
 	file://libotp.a \
 "
-SRCREV = "5565ab2f814941f2870acaf2a2410d819225550b"
+SRCREV = "0dcfcbe691d4d83311594844a5673506c33447c6"
 
 S = "${WORKDIR}/git"
 
